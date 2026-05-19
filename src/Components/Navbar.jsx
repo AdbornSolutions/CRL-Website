@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/images/crl-logo.png";
 import facebookIcon from "../assets/images/Facebook.png";
@@ -49,7 +50,7 @@ const Navbar = () => {
                 <nav className="navbar">
                     {/* Logo */}
                     <div className="logo">
-                        <img src={logo} alt="Logo" />
+                       <a href="/"><img src={logo} alt="Logo" /></a> 
                     </div>
 
                     {/* Mobile Toggle */}
@@ -64,16 +65,16 @@ const Navbar = () => {
                     <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
                         <ul>
                             <li>
-                                <a href="home.html">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <a href="service.html">Services</a>
+                                <a href="/service">Services</a>
                             </li>
                             <li>
-                                <a href="project.html">Project</a>
+                                <a href="/project">Project</a>
                             </li>
                             <li>
-                                <a href="contactus.html">Contact</a>
+                                <a href="/contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -91,7 +92,7 @@ const Navbar = () => {
                             </div>
 
                             <div className="quote-wrapper">
-                                <a href="contactus.html#contactForm" className="quote-btn">
+                                <a href="/contact" className="quote-btn">
                                     Request A Quote
                                 </a>
                             </div>

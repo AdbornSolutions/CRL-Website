@@ -26,7 +26,7 @@ const HomeSlider = () => {
             <img
               src={img}
               alt=""
-              className="h-20 md:h-24 lg:h-28 w-auto object-cover rounded-md"
+              className="h-20 md:h-24 lg:h-28 w-auto object-cover "
             />
           </div>
         ))}
@@ -37,7 +37,7 @@ const HomeSlider = () => {
             <img
               src={img}
               alt=""
-              className="h-20 md:h-24 lg:h-28 w-auto object-cover rounded-md"
+              className="h-20 md:h-24 lg:h-28 w-auto object-cover "
             />
           </div>
         ))}

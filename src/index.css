@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@400;600&display=swap');
 .body{
     background-color:white;
 }
@@ -15,4 +16,54 @@
 
 .animate-slide {
   animation: slide 30s linear infinite;
+}
+/* ================= FONT CLASSES ================= */
+
+/* Montserrat SemiBold */
+.font-heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+/* Montserrat Regular */
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Lato Regular */
+.font-lato {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.shipping-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.shipping-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.clip-shape {
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
+.shipping-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.shipping-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.service-card::-webkit-scrollbar {
+  display: none;
+}
+
+.service-card {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

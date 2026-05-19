@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutLogImage from '../../assets/homepage/Group 24.png'; // Import the image
+import aboutLogImage from '../../assets/homepage/about-log.png'; // Import the image
 
 const AboutLogisco = () => {
   return (
@@ -10,16 +10,16 @@ const AboutLogisco = () => {
           <img
             src={aboutLogImage} // Replace with your actual image URL
             alt="Logisco Cargo"
-            className="w-full h-auto rounded-lg object-cover"
+            className="w-full h-auto  object-cover"
           />
 
           {/* 20+ Years of Experience (Positioned at the bottom right of the image) */}
-          <div className="absolute bottom-2 right-10 bg-[#0D2A4F] text-white py-3 px-6 rounded-xl flex items-center">
+          {/* <div className="absolute bottom-2 right-10 bg-[#0D2A4F] text-white py-3 px-6 rounded-xl flex items-center">
             <div className="flex items-center text-lg font-bold">
               <span className="text-3xl font-semibold">20+</span>
               <span className="ml-2">Years of Experience</span>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Section (Text and Info) */}
@@ -30,18 +30,16 @@ const AboutLogisco = () => {
             <span className="text-sm font-semibold text-black">About us</span>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">About Logisco Cargo</h2>
+          <h2 className="text-4xl font-heading font-bold text-gray-900 mb-4">About Logisco Cargo</h2>
 
-          <p className="text-lg text-gray-600 mb-6">
-            Logisco Cargo is a leading provider of innovative transportation and logistics solutions.
-            With a focus on efficiency, reliability, and customer satisfaction, we offer seamless cargo transport services globally.
-            Our cutting-edge technology and skilled team ensure your business operations run smoothly, empowering you to reach new heights in the logistics industry.
+          <p className="text-lg text-black mb-6">
+           Logisco Cargo is a leading provider of innovative transportation and logistics solutions. With a focus on efficiency, reliability, and customer satisfaction, we offer seamless cargo transport services globally. Our cutting-edge technology and skilled team ensure your business operations run smoothly, empowering you to reach new heights in the logistics industry.
           </p>
 
           {/* Learn More Button */}
           <a
             href="#learn-more"
-            className="text-sm font-semibold text-black hover:underline"
+            className="text-md font-semibold text-black underline"
           >
             Learn More →
           </a>
