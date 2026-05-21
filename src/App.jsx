@@ -12,7 +12,7 @@ import Storage from "./pages/services/storagefacitity"
 import Bulk from "./pages/services/bulkshifting"
 import Car from "./pages/services/carshifting"
 import Corporate from "./pages/services/corporateshifting"
-import Testhome from "./Components/test/Testhome";
+
 import Blog from "./pages/Blog"
 import Blog1 from "./pages/blog1"
 import Contact from "./pages/Contact";
@@ -35,7 +35,7 @@ function App() {
       <Route path="/services/bulk" element={<Bulk />} />
       <Route path="/services/car" element={<Car />} />
       <Route path="/services/corporate" element={<Corporate />} />
-      <Route path="/testhome" element={<Testhome />} />
+     
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog1" element={<Blog1 />} />
       <Route path="/contact" element={<Contact />} />
