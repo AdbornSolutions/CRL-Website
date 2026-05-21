@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -16,7 +17,7 @@ import Blog from "./pages/Blog"
 import Blog1 from "./pages/blog1"
 import Contact from "./pages/Contact";
 import Project from "./pages/Project";
-// import TermsPrivacy from "./Pages/TermsPrivacy";
+import TermsPrivacy from "./Pages/TermsPrivacy";
 
 
 
@@ -39,6 +40,7 @@ function App() {
       <Route path="/blog1" element={<Blog1 />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/project" element={<Project />} />
+      <Route path="/term&privacy" element={<TermsPrivacy />} />
 
     </Routes>
 

@@ -1,29 +1,35 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const TermsPrivacy = () => {
   return (
     <>
       <Navbar />
 
-      <section className="bg-[#f6f8fb] min-h-screen py-8 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-6">
-          
+      <section className="bg-[#f6f8fb] min-h-screen py-12 px-5 scroll-smooth">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
           {/* LEFT SIDEBAR */}
-          <aside className="bg-white rounded-xl p-4 h-fit shadow-sm lg:sticky lg:top-24">
-            <h4 className="text-xs font-bold text-gray-500 mb-3">
+          <aside className="bg-white rounded-2xl p-6 h-fit shadow-md lg:sticky lg:top-28">
+            <h4 className="text-sm font-bold text-gray-500 mb-4">
               LEGAL DOCUMENTS
             </h4>
 
-            <a href="#terms" className="block bg-[#eaf1ff] text-[#12345c] rounded-md px-3 py-2 text-sm font-semibold mb-2">
+            <a
+              href="#terms"
+              className="block bg-[#eaf1ff] text-[#12345c] rounded-xl px-4 py-3 text-[15px] font-semibold mb-3 hover:scale-[1.02] transition"
+            >
               Terms & Conditions
             </a>
 
-            <a href="#privacy" className="block text-gray-700 rounded-md px-3 py-2 text-sm hover:bg-gray-100">
+            <a
+              href="#privacy"
+              className="block text-gray-700 rounded-xl px-4 py-3 text-[15px] hover:bg-gray-100 transition"
+            >
               Privacy Policy
             </a>
 
-            <div className="mt-5 border-t pt-4 space-y-2 text-sm text-gray-600">
+            <div className="mt-6 border-t pt-5 space-y-3 text-[15px] text-gray-600">
               <p>1. Services & Scope</p>
               <p>2. User Responsibilities</p>
               <p>3. Booking & Payments</p>
@@ -32,31 +38,33 @@ const TermsPrivacy = () => {
               <p>6. Liability & Insurance</p>
             </div>
 
-            <div className="mt-5 bg-[#eef4ff] rounded-lg p-3">
-              <h5 className="text-xs font-bold text-[#12345c]">NEED HELP?</h5>
-              <p className="text-xs text-gray-600 mt-1">
+            <div className="mt-6 bg-[#eef4ff] rounded-xl p-5">
+              <h5 className="text-sm font-bold text-[#12345c]">NEED HELP?</h5>
+              <p className="text-[14px] text-gray-600 mt-2 leading-6">
                 Questions about our legal terms? Reach out to our team.
               </p>
-              <p className="text-xs font-semibold text-[#12345c] mt-2">
-                legal@crl.com
+              <p className="text-[14px] font-semibold text-[#12345c] mt-3 break-words">
+                chapleroadlines26@crl-transport.com
               </p>
             </div>
           </aside>
 
           {/* MAIN CONTENT */}
-          <main className="space-y-8">
-            
+          <main className="space-y-10">
             {/* TERMS HEADER */}
-            <div id="terms" className="bg-white rounded-xl p-5 sm:p-7 shadow-sm">
-              <p className="text-xs text-[#16427a] font-semibold mb-2">
+            <div
+              id="terms"
+              className="scroll-mt-32 bg-white rounded-2xl p-8 sm:p-10 shadow-md"
+            >
+              <p className="text-sm text-[#16427a] font-semibold mb-3">
                 LEGAL DOCUMENT OCTOBER 26, 2023
               </p>
 
-              <h1 className="text-2xl sm:text-3xl font-bold text-[#111827]">
+              <h1 className="text-3xl sm:text-4xl font-bold text-[#111827]">
                 Terms and Conditions
               </h1>
 
-              <p className="text-sm text-gray-600 mt-3 max-w-3xl">
+              <p className="text-[16px] text-gray-600 mt-4 max-w-3xl leading-8">
                 Welcome to CRL Solutions. These terms govern your use of our
                 logistics and transportation services. By engaging with us, you
                 agree to comply with the guidelines outlined below.
@@ -64,18 +72,19 @@ const TermsPrivacy = () => {
             </div>
 
             {/* TERMS CONTENT */}
-            <div className="bg-white rounded-xl p-5 sm:p-7 shadow-sm space-y-7">
-              
+            <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-md space-y-10">
               <ContentBlock
                 number="1"
                 title="Services and Scope"
                 text="CRL Solutions provides comprehensive logistics, freight forwarding, and warehousing services. Our scope includes domestic and international transport, last-mile delivery, and supply chain management consulting."
               />
 
-              <ul className="text-sm text-gray-600 list-disc pl-5 space-y-1">
+              <ul className="text-[16px] text-gray-600 list-disc pl-6 space-y-2 leading-8">
                 <li>Standard freight shipping via road, rail, air, and sea</li>
                 <li>Real-time tracking and digital documentation</li>
-                <li>Customized warehousing solutions and inventory management</li>
+                <li>
+                  Customized warehousing solutions and inventory management
+                </li>
               </ul>
 
               <ContentBlock
@@ -84,9 +93,15 @@ const TermsPrivacy = () => {
                 text="As a client, you are responsible for providing accurate shipment information. This includes but is not limited to:"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <InfoCard title="Documentation" text="Providing valid invoices and customs documents where required." />
-                <InfoCard title="Packaging" text="Securely packaging goods to withstand standard transport handling." />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <InfoCard
+                  title="Documentation"
+                  text="Providing valid invoices and customs documents where required."
+                />
+                <InfoCard
+                  title="Packaging"
+                  text="Securely packaging goods to withstand standard transport handling."
+                />
               </div>
 
               <ContentBlock
@@ -102,12 +117,8 @@ const TermsPrivacy = () => {
               />
 
               <div>
-                <ContentBlock
-                  number="5"
-                  title="Prohibited Items"
-                  text=""
-                />
-                <div className="bg-red-50 border border-red-100 rounded-lg p-4 text-sm text-red-600">
+                <ContentBlock number="5" title="Prohibited Items" text="" />
+                <div className="bg-red-50 border border-red-100 rounded-xl p-6 text-[16px] text-red-600 leading-8 mt-4">
                   The following items are strictly prohibited: hazardous
                   materials, flammable liquids, illegal substances, ivory, and
                   hazardous waste. Shipping any of these may result in immediate
@@ -123,16 +134,21 @@ const TermsPrivacy = () => {
             </div>
 
             {/* PRIVACY HEADER */}
-            <div id="privacy" className="bg-[#0b2b52] rounded-xl p-6 sm:p-8 shadow-sm text-white">
-              <h2 className="text-2xl sm:text-3xl font-bold">Privacy Policy</h2>
-              <p className="text-sm text-white/80 mt-3 max-w-2xl">
+            <div
+              id="privacy"
+              className="scroll-mt-32 bg-[#0b2b52] rounded-2xl p-8 sm:p-10 shadow-md text-white"
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold">
+                Privacy Policy
+              </h2>
+              <p className="text-[16px] text-white/80 mt-4 max-w-2xl leading-8">
                 We value your trust. This policy explains how we collect, use,
                 and protect your data across our logistics network.
               </p>
             </div>
 
             {/* PRIVACY CONTENT */}
-            <div className="bg-white rounded-xl p-5 sm:p-7 shadow-sm space-y-7">
+            <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-md space-y-10">
               <ContentBlock
                 number="7"
                 title="Information Collection"
@@ -148,34 +164,45 @@ const TermsPrivacy = () => {
               <div>
                 <ContentBlock number="9" title="Security Measures" text="" />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
-                  <InfoCard title="End-to-End Encryption" text="All data is encrypted between your browser and our servers." />
-                  <InfoCard title="Access Controls" text="Restricted access to personal data for only authorized staff." />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+                  <InfoCard
+                    title="End-to-End Encryption"
+                    text="All data is encrypted between your browser and our servers."
+                  />
+                  <InfoCard
+                    title="Access Controls"
+                    text="Restricted access to personal data for only authorized staff."
+                  />
                 </div>
               </div>
 
-              <div className="border-t pt-6">
-                <h3 className="text-lg font-bold mb-5">Contact Information</h3>
+              <div className="border-t pt-8">
+                <h3 className="text-2xl font-bold mb-6">
+                  Contact Information
+                </h3>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-[16px] text-gray-600 leading-8">
                   <div>
-                    <h4 className="text-xs font-bold text-gray-400 mb-2">
+                    <h4 className="text-sm font-bold text-gray-400 mb-3">
                       LEGAL DEPARTMENT
                     </h4>
-                    <p>1234 Business Avenue</p>
-                    <p>New York, NY 10001, USA</p>
+                    <p>C/O Babarao Chaple Miniwada (Kondhali)</p>
+                    <p>
+                      Tahsil – Katol District – Nagpur – 441103 Maharashtra
+                      (MH)
+                    </p>
                   </div>
 
                   <div>
-                    <h4 className="text-xs font-bold text-gray-400 mb-2">
+                    <h4 className="text-sm font-bold text-gray-400 mb-3">
                       COMMUNICATION
                     </h4>
-                    <p>Email: support@example.com</p>
-                    <p>Phone: +1 000 123 4567</p>
+                    <p>Email: chapleroadlines26@crl-transport.com</p>
+                    <p>Phone: +91 74993 58403</p>
                   </div>
 
                   <div>
-                    <h4 className="text-xs font-bold text-gray-400 mb-2">
+                    <h4 className="text-sm font-bold text-gray-400 mb-3">
                       OFFICE HOURS
                     </h4>
                     <p>Monday - Friday</p>
@@ -184,40 +211,39 @@ const TermsPrivacy = () => {
                 </div>
               </div>
             </div>
-
           </main>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };
 
 const ContentBlock = ({ number, title, text }) => {
   return (
-    <div>
-      <div className="flex items-center gap-3 mb-2">
-        <span className="w-6 h-6 rounded-md bg-[#eaf1ff] text-[#12345c] flex items-center justify-center text-xs font-bold">
+    <div className="space-y-3">
+      <div className="flex items-center gap-4">
+        <span className="w-8 h-8 rounded-lg bg-[#eaf1ff] text-[#12345c] flex items-center justify-center text-sm font-bold shrink-0">
           {number}
         </span>
-        <h2 className="text-lg sm:text-xl font-bold text-[#111827]">
+
+        <h2 className="text-xl sm:text-[24px] font-bold text-[#111827]">
           {title}
         </h2>
       </div>
 
-      {text && (
-        <p className="text-sm text-gray-600 leading-relaxed">
-          {text}
-        </p>
-      )}
+      {text && <p className="text-[16px] text-gray-600 leading-8">{text}</p>}
     </div>
   );
 };
 
 const InfoCard = ({ title, text }) => {
   return (
-    <div className="bg-[#f3f6fb] rounded-lg p-4">
-      <h4 className="text-sm font-bold text-[#111827]">{title}</h4>
-      <p className="text-xs text-gray-600 mt-1">{text}</p>
+    <div className="bg-[#f3f6fb] rounded-xl p-6">
+      <h4 className="text-[17px] font-bold text-[#111827]">{title}</h4>
+
+      <p className="text-[15px] text-gray-600 mt-3 leading-7">{text}</p>
     </div>
   );
 };

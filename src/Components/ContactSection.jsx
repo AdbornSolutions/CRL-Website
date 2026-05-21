@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const ContactSection = () => {
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxjgrKOBM_iVGl7ANL8CbIRKtfYOfgjzlUDeFfXzyzFI-E0n6aJTYY_TKVm2JRn9g46/exec";
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -24,29 +26,30 @@ const ContactSection = () => {
     setSuccess("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
+        mode: "no-cors",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "text/plain;charset=utf-8",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          mobile: formData.mobile,
+          message: formData.message,
+        }),
       });
 
-      const data = await response.json();
+      setSuccess("Message sent successfully!");
 
-      if (data.success) {
-        setSuccess("Message sent successfully!");
-        setFormData({
-          fullName: "",
-          email: "",
-          mobile: "",
-          message: "",
-        });
-      } else {
-        setSuccess(data.message || "Something went wrong");
-      }
+      setFormData({
+        fullName: "",
+        email: "",
+        mobile: "",
+        message: "",
+      });
     } catch (error) {
-      setSuccess("Server error. Please try again.");
+      setSuccess("Something went wrong. Please try again.");
     }
 
     setLoading(false);
@@ -55,11 +58,10 @@ const ContactSection = () => {
   return (
     <section className="w-full bg-white py-16 px-5 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
         <div>
           <p className="text-sm text-black mb-3">Get in Touch</p>
 
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-black">
+          <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-6 text-black">
             We are Always ready to <br />
             help you and answer <br />
             your questions
@@ -75,7 +77,7 @@ const ContactSection = () => {
               <h4 className="text-xl font-semibold underline mb-1">
                 Call Center
               </h4>
-              <p>xxxx-xxx-xxx</p>
+              <p>+91 74993 58403</p>
             </div>
 
             <div>
@@ -83,8 +85,9 @@ const ContactSection = () => {
                 Our Location
               </h4>
               <p>
-                34A, sarwodya <br />
-                nagar,khamla,nagpur
+               
+
+C/O Babarao Chaple Miniwada (Kondhali) <br />Tahsil – Katol District – Nagpur – 441103 <br /> Maharashtra (MH)
               </p>
             </div>
 
@@ -92,20 +95,49 @@ const ContactSection = () => {
               <h4 className="text-xl font-semibold underline mb-1">
                 Email
               </h4>
-              <p>adbornsol@gmail.com</p>
+              <p>chapleroadlines26@crl-transport.com</p>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold underline mb-1">
-                Social network
-              </h4>
-              <div className="flex gap-3 text-xl">
-                <span>●</span>
-                <span>●</span>
-                <span>●</span>
-                <span>●</span>
-              </div>
-            </div>
+           <div>
+  <h4 className="text-xl font-semibold underline mb-1">
+    Social network
+  </h4>
+
+  <div className="flex gap-4 text-xl mt-2">
+    
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/crl_packers_and_movers_nagpur_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-pink-500 transition"
+    >
+      <i className="fab fa-instagram"></i>
+    </a>
+
+    {/* WhatsApp */}
+    <a
+      href="https://wa.me/917499358403"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+      className="hover:text-green-500 transition"
+    >
+      <i className="fab fa-whatsapp"></i>
+    </a>
+
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/profile.php?id=61587466176300"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-blue-500 transition"
+    >
+      <i className="fab fa-facebook-f"></i>
+    </a>
+
+  </div>
+</div>
           </div>
         </div>
 
@@ -126,6 +158,7 @@ const ContactSection = () => {
               placeholder="Full Name"
               value={formData.fullName}
               onChange={handleChange}
+              required
               className="w-full px-5 py-4 rounded-xl shadow-md outline-none text-black"
             />
 
@@ -135,6 +168,7 @@ const ContactSection = () => {
               placeholder="Email id"
               value={formData.email}
               onChange={handleChange}
+              required
               className="w-full px-5 py-4 rounded-xl shadow-md outline-none text-black"
             />
 
@@ -144,6 +178,7 @@ const ContactSection = () => {
               placeholder="Mobile no."
               value={formData.mobile}
               onChange={handleChange}
+              required
               className="w-full px-5 py-4 rounded-xl shadow-md outline-none text-black"
             />
 
@@ -153,13 +188,14 @@ const ContactSection = () => {
               placeholder="Message"
               value={formData.message}
               onChange={handleChange}
+              required
               className="w-full px-5 py-4 rounded-xl shadow-md outline-none text-black"
             />
 
             <button
               type="submit"
               disabled={loading}
-              className="bg-sky-400 hover:bg-sky-500 text-black font-bold px-8 py-3 rounded-full transition"
+              className="bg-sky-400 hover:bg-sky-500 text-black font-bold px-8 py-3 rounded-full transition disabled:opacity-60"
             >
               {loading ? "Submitting..." : "Submit"}
             </button>
@@ -171,7 +207,6 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-
       </div>
     </section>
   );

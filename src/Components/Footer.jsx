@@ -74,31 +74,31 @@ const Footer = () => {
           </div>
 
           {/* Policy */}
-          {/* <div className="w-full sm:w-1/2 md:w-1/4 lg:w-2/12">
+          <div className="w-full sm:w-1/2 md:w-1/4 lg:w-2/12">
             <h6 className="footer-title text-lg font-semibold text-gray-300 mb-4">Policy</h6>
             <ul className="footer-links text-gray-400 space-y-2">
               <li>
-                <a href="/terms-privacy" className="hover:text-gray-200">
+                <a href="/term&privacy" className="hover:text-gray-200">
                   Terms and conditions
                 </a>
               </li>
               <li>
-                <a href="/terms-privacy" className="hover:text-gray-200">
+                <a href="/term&privacy" className="hover:text-gray-200">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/terms-privacy" className="hover:text-gray-200">
+                <a href="/term&privacy" className="hover:text-gray-200">
                   Shipping and Delivery Policy
                 </a>
               </li>
               <li>
-                <a href="/terms-privacy" className="hover:text-gray-200">
+                <a href="/term&privacy" className="hover:text-gray-200">
                   Refund & Return Policy
                 </a>
               </li>
             </ul>
-          </div> */}
+          </div>
 
           {/* Contact */}
           <div className="w-full sm:w-1/2 md:w-1/4 lg:w-3/12">
@@ -132,8 +132,8 @@ const Footer = () => {
 
       <div className="footer-bottom bg-dark py-2">
         <div className="container mx-auto text-center text-gray-300">
-          © 2025 <a href="#" className="footer-link text-gray-400 hover:text-white">CRL Transport</a> | Designed by{' '}
-          <a href="#" className="footer-link text-gray-400 hover:text-white">Adborn Solutions</a>
+          © 2025 <a href="/" className="footer-link text-gray-400 hover:text-white">CRL Transport</a> | Designed by{' '}
+          <a href="https://adbornsolutions.com/index.html" className="footer-link text-gray-400 hover:text-white">Adborn Solutions</a>
         </div>
       </div>
     </footer>
