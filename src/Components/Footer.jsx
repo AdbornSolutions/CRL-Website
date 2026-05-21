@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
 
           {/* Policy */}
-          <div className="w-full sm:w-1/2 md:w-1/4 lg:w-2/12">
+          {/* <div className="w-full sm:w-1/2 md:w-1/4 lg:w-2/12">
             <h6 className="footer-title text-lg font-semibold text-gray-300 mb-4">Policy</h6>
             <ul className="footer-links text-gray-400 space-y-2">
               <li>
@@ -98,7 +98,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div className="w-full sm:w-1/2 md:w-1/4 lg:w-3/12">
