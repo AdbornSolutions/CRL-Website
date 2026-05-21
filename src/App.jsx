@@ -16,7 +16,7 @@ import Blog from "./pages/Blog"
 import Blog1 from "./pages/blog1"
 import Contact from "./pages/Contact";
 import Project from "./pages/Project";
-import TermsPrivacy from "./Pages/TermsPrivacy";
+// import TermsPrivacy from "./Pages/TermsPrivacy";
 
 
 
