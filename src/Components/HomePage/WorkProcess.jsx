@@ -73,8 +73,8 @@ const WorkProcess = () => {
             </h3>
 
             <p className="text-[17px] leading-[1.55] text-[#263447] mt-5">
-              Logisco Air freight service deliver to knowledge & opportunity to
-              optimize. Logisco Air freight service deliver to knowledge and
+              CRL Air freight service deliver to knowledge & opportunity to
+              optimize. CRL Air freight service deliver to knowledge and
               opportunity to optimize.
             </p>
           </div>

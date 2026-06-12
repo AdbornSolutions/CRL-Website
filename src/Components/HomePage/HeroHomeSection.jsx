@@ -22,14 +22,14 @@ const HeroHomeSection = () => {
 
         {/* Heading */}
         <h1 className="font-heading text-5xl sm:text-[36px] md:text-[42px] lg:text-[46px] font-bold leading-tight tracking-wide mb-4">
-          Welcome To Logisco Cargo <br className="hidden sm:block" />
+          Welcome To CRL <br className="hidden sm:block" />
           Transport Services
         </h1>
 
         {/* Paragraph */}
         <p className="max-w-[520px] mx-auto text-xs sm:text-sm md:text-[16px] leading-relaxed text-white/90 mb-6 font-body ">
           Take your business to the next level with our efficient transportation
-          management tools. Logisco will open a new horizon for us.
+          management tools. CRL will open a new horizon for us.
         </p>
 
         {/* Button */}
