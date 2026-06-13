@@ -116,6 +116,22 @@ const challenges = [
   "Tight timeline of 24 hours",
   "Long-distance transportation",
 ];
+const testimonials = [
+  {
+    id: 1,
+    text: "CRL Packers and Movers made our home shifting completely stress-free. Every item, from fragile glassware to heavy furniture, was packed carefully and delivered safely.",
+    name: "Priya Mehta",
+    role: "First-Time Homebuyers",
+    rating: "★★★★★",
+  },
+  {
+    id: 2,
+    text: "Excellent office relocation service. The team handled our systems, furniture, and documents very professionally without causing any delay or damage.",
+    name: "Rahul Sharma",
+    role: "Business Owner",
+    rating: "★★★★★",
+  },
+];
 
 const ProjectPortfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -360,21 +376,28 @@ const ProjectPortfolio = () => {
                   </p>
                 </div>
 
-                {[1, 2].map((item) => (
-                  <div
-                    key={item}
-                    className="bg-white border border-gray-300 rounded-2xl p-5 min-h-[180px]"
-                  >
-                    <p className="text-sm text-black leading-relaxed">
-                      CRL Packers and Movers made our home shifting completely stress-free. Every item, from fragile glassware to heavy furniture, was packed carefully and delivered safely.
-                    </p>
-                    <h4 className="font-bold text-sm mt-4">Priya Mehta</h4>
-                    <p className="font-semibold text-xs">
-                      First-Time Homebuyers
-                    </p>
-                    <p className="text-yellow-500 text-sm mt-1">★★★★★</p>
-                  </div>
-                ))}
+               {testimonials.map((testimonial) => (
+  <div
+    key={testimonial.id}
+    className="bg-white border border-gray-300 rounded-2xl p-5 min-h-[180px]"
+  >
+    <p className="text-sm text-black leading-relaxed">
+      {testimonial.text}
+    </p>
+
+    <h4 className="font-bold text-sm mt-4">
+      {testimonial.name}
+    </h4>
+
+    <p className="font-semibold text-xs">
+      {testimonial.role}
+    </p>
+
+    <p className="text-yellow-500 text-sm mt-1">
+      {testimonial.rating}
+    </p>
+  </div>
+))}
               </div>
             </div>
           </div>
