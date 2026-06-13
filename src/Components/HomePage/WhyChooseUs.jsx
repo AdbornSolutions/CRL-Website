@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
 
         {/* Right paragraph */}
         <p className="absolute left-[575px] top-[50px]  max-w-[480px] text-[16px] leading-[22px] text-black font-lato">
-          Logisco Air freight service delivers the knowledge & opportunity to
+         CRL service delivers the knowledge & opportunity to
           optimize every mile on every lane. Get full-service Truckload division
           to provide more options to manage costs by combining technology
           intelligence.
@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
           </h2>
 
           <p className="text-[14px] leading-[20px] text-black mt-5">
-            Logisco Air freight service delivers the knowledge & opportunity to
+           CRL service delivers the knowledge & opportunity to
             optimize every mile on every lane. Get full-service Truckload
             division to provide more options to manage costs by combining
             technology intelligence.

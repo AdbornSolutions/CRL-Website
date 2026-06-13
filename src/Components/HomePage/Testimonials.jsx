@@ -36,7 +36,7 @@ const Testimonials = () => {
         </h2>
 
         <p className="text-[13px] sm:text-[14px] text-black leading-[1.35] mt-3 max-w-[580px] mx-auto">
-          At DreaminHouse, we're all about giving you smooth real estate
+          At CRL, we're all about giving you smooth real estate
           solutions that fit your needs,
           <br className="hidden sm:block" />
           making sure you have a great experience every step of the way.

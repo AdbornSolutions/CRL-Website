@@ -34,7 +34,7 @@ const WorkProcess = () => {
 
           <h2 className="text-[30px] sm:text-[34px] lg:text-[36px] leading-[1.2] font-bold text-black">
             We always follow the best <br />
-            ways of logistics
+            ways at CRL
           </h2>
 
           <p className="text-[17px] sm:text-[18px] text-[#263447] leading-[1.6] mt-6 max-w-[620px]">

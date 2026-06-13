@@ -9,21 +9,21 @@ const steps = [
     number: "1",
     title: "Step 1. Receive Packages",
     description:
-      "Logisco Air freight service deliver to knowledge & opportunity to optimize. Logisco Air freight service deliver to knowledge and opportunity to optimize.",
+      "CRL deliver to knowledge & opportunity to optimize. Logisco Air freight service deliver to knowledge and opportunity to optimize.",
     image: step1,
   },
   {
     number: "2",
     title: "Step 2. Transport Packages",
     description:
-      "Logisco Air freight service deliver to knowledge & opportunity to optimize. Logisco Air freight service deliver to knowledge and opportunity to optimize.",
+      "CRL service deliver to knowledge & opportunity to optimize. Logisco Air freight service deliver to knowledge and opportunity to optimize.",
     image: step2,
   },
   {
     number: "3",
     title: "Step 3. Deliver Packages",
     description:
-      "Logisco Air freight service deliver to knowledge & opportunity to optimize. Logisco Air freight service deliver to knowledge and opportunity to optimize.",
+      "CRL service deliver to knowledge & opportunity to optimize. Logisco Air freight service deliver to knowledge and opportunity to optimize.",
     image: step3,
   },
 ];
