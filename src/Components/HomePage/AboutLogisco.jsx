@@ -30,10 +30,10 @@ const AboutLogisco = () => {
             <span className="text-sm font-semibold text-black">About us</span>
           </div>
 
-          <h2 className="text-4xl font-heading font-bold text-gray-900 mb-4">About Logisco Cargo</h2>
+          <h2 className="text-4xl font-heading font-bold text-gray-900 mb-4">About CRL</h2>
 
           <p className="text-lg text-black mb-6">
-           Logisco Cargo is a leading provider of innovative transportation and logistics solutions. With a focus on efficiency, reliability, and customer satisfaction, we offer seamless cargo transport services globally. Our cutting-edge technology and skilled team ensure your business operations run smoothly, empowering you to reach new heights in the logistics industry.
+           CRL Cargo is a leading provider of innovative transportation and logistics solutions. With a focus on efficiency, reliability, and customer satisfaction, we offer seamless cargo transport services globally. Our cutting-edge technology and skilled team ensure your business operations run smoothly, empowering you to reach new heights in the logistics industry.
           </p>
 
           {/* Learn More Button */}
