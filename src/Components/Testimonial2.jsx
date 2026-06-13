@@ -53,7 +53,7 @@ const Testimonial2 = () => {
           </h2>
 
           <p className="text-md text-black leading-relaxed max-w-sm">
-            At DreamInHouse, we're all about giving you smooth real estate
+            At CRL, we're all about giving you smooth real estate
             solutions that fit your needs, making sure you have a great
             experience every step of the way.
           </p>

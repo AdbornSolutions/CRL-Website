@@ -73,7 +73,7 @@ const WorkProcess = () => {
             </h3>
 
             <p className="text-[17px] leading-[1.55] text-[#263447] mt-5">
-              CRL Air freight service deliver to knowledge & opportunity to
+              CRL  service deliver to knowledge & opportunity to
               optimize. CRL Air freight service deliver to knowledge and
               opportunity to optimize.
             </p>
@@ -93,7 +93,7 @@ const WorkProcess = () => {
             </h3>
 
             <p className="text-[17px] leading-[1.55] text-[#263447] mt-5 max-w-[330px] mx-auto">
-              Logisco Air freight service deliver to knowledge & opportunity to
+              CRL service deliver to knowledge & opportunity to
               optimize. Logisco Air freight service deliver to knowledge and
               opportunity to optimize.
             </p>
@@ -112,7 +112,7 @@ const WorkProcess = () => {
             </h3>
 
             <p className="text-[17px] leading-[1.55] text-[#263447] mt-5 max-w-[360px] mx-auto">
-              Logisco Air freight service deliver to knowledge & opportunity to
+             CRL service deliver to knowledge & opportunity to
               optimize. Logisco Air freight service deliver to knowledge and
               opportunity to optimize.
             </p>
@@ -139,7 +139,7 @@ const WorkProcess = () => {
               </h3>
 
               <p className="text-[15px] leading-[1.55] text-[#263447] mt-4 max-w-[330px] mx-auto">
-                Logisco Air freight service deliver to knowledge & opportunity
+               CRL service deliver to knowledge & opportunity
                 to optimize. Logisco Air freight service deliver to knowledge
                 and opportunity to optimize.
               </p>

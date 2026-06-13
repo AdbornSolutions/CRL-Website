@@ -354,7 +354,7 @@ const ProjectPortfolio = () => {
                     What our Clients say
                   </h3>
                   <p className="text-sm text-black leading-relaxed">
-                    At DreamInHouse, we're all about giving you smooth real estate
+                    At CRL, we're all about giving you smooth real estate
                     solutions that fit your needs, making sure you have a great
                     experience every step of the way.
                   </p>
