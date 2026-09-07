@@ -18,12 +18,14 @@ import Blog1 from "./pages/blog1"
 import Contact from "./pages/Contact";
 import Project from "./pages/Project";
 import TermsPrivacy from "./pages/TermsPrivacy";
+import SiteMotion from "./Components/SiteMotion";
 
 
 
 function App() {
   return (
     <>
+    <SiteMotion />
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/service" element={<Services />} />

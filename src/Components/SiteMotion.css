@@ -1,0 +1,74 @@
+html {
+  scroll-padding-top: 120px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.lenis) { scroll-behavior: smooth; }
+
+  .motion-pending {
+    opacity: 0;
+    translate: 0 24px;
+    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      translate 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .motion-visible,
+  .motion-pending:focus-within {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .motion-card {
+    transition: translate 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms ease;
+  }
+
+  .quote-btn, section button, section a[class*="bg-"] {
+    transition: transform 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .navbar-links a {
+    position: relative;
+  }
+
+  .navbar-links a::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -7px;
+    height: 2px;
+    background: #ff9900;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 280ms ease;
+  }
+
+  .navbar-links a:is(:hover, :focus-visible)::after {
+    transform: scaleX(1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .motion-card:hover { translate: 0 -5px; }
+    .quote-btn:hover, section button:hover, section a[class*="bg-"]:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgb(0 35 71 / 15%);
+    }
+  }
+
+  .quote-btn:active, section button:active { transform: scale(0.97); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, body, #root * {
+    scroll-behavior: auto !important;
+  }
+  #root *, #root *::before, #root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+@media print {
+  .motion-pending { opacity: 1; translate: none; }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import "./ServiceCard.css";
 
 import img1 from "../../assets/servicepage/img1.png";
 import img2 from "../../assets/servicepage/img2.png";
@@ -8,7 +8,7 @@ import img5 from "../../assets/servicepage/img5.png";
 import img6 from "../../assets/servicepage/img6.png";
 import img7 from "../../assets/servicepage/img7.png";
 import img8 from "../../assets/servicepage/img8.png";
-import bus from "../../assets/servicepage/bus.png";
+
 
 const services = [
   {
@@ -69,63 +69,69 @@ const services = [
   },
 ];
 
-const ServiceCard = ({ imageSrc, title, description, buttonLink }) => {
-  return (
-    <div className="relative h-[330px] sm:h-[350px] lg:h-[300px] group">
-      {/* Image */}
-      <div className="w-full h-full rounded-[18px] overflow-hidden">
-        <img
-          src={imageSrc}
-          alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
-        />
-      </div>
+const ServiceCard = ({ imageSrc, title, description, buttonLink, index }) => (
+  <article data-reveal className="service-tile group flex h-full flex-col overflow-hidden rounded-[24px] border border-slate-200/80 bg-white">
+    <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+      <img
+        src={imageSrc}
+        alt={title}
+        loading="lazy"
+        decoding="async"
+        className="service-tile-image h-full w-full object-cover"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#002f6c]/30 via-transparent to-transparent" />
+      <span className="absolute left-4 top-4 rounded-full border border-white/60 bg-white/95 px-3 py-1.5 text-[11px] font-semibold tracking-[0.16em] text-[#002f6c]">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+    </div>
 
-      {/* White Overlay Box */}
-      <div className="absolute left-[-18px] bottom-[8px] w-[245px] min-h-[155px] bg-white shadow-lg px-[5px] pr-5 py-4">
-        {/* Orange Icon - inside white box */}
-        <div className="absolute left-0 top-0 w-[38px] h-[38px] bg-[#ff8a00] flex items-center justify-center">
-         <img src={bus} alt="" srcset="" />
+    <div className="flex flex-1 flex-col p-6">
+      <h3 className="font-heading text-[20px] leading-[1.35] tracking-[-0.025em] text-[#092b4e] sm:min-h-[54px]">
+        {title}
+      </h3>
+      <p className="mb-6 mt-3 text-[14px] leading-[1.8] text-slate-600">
+        {description}
+      </p>
+      <a
+        href={buttonLink}
+        aria-label={`Explore ${title}`}
+        className="service-tile-link mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-5 text-[13px] font-semibold text-[#002f6c]"
+      >
+        Explore service
+        <span className="service-tile-arrow flex h-9 w-9 shrink-0 items-center justify-center rounded-full" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </article>
+);
+
+const ServiceSection = () => (
+  <section aria-labelledby="services-heading" className="service-collection w-full px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+    <div className="mx-auto max-w-[1280px]">
+      <div className="mb-10 flex flex-col gap-5 lg:mb-12 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+        <div>
+          <div className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#8f4b00]">
+            <span className="h-px w-8 bg-[#ff9900]" aria-hidden="true" />
+            Our services
+          </div>
+          <h2 id="services-heading" className="font-heading max-w-[640px] text-3xl leading-[1.15] tracking-[-0.035em] text-[#092b4e] sm:text-4xl lg:text-[44px]">
+            Every move, handled with care.
+          </h2>
         </div>
-
-        <h3 className="text-[19px] leading-[21px] px-[38px] font-bold text-black mb-3">
-          {title}
-        </h3>
-
-        <p className="text-[14px] leading-[18px] text-black">
-          {description}
+        <p className="max-w-[360px] text-[15px] leading-relaxed text-slate-600">
+          From your home to your business, explore the right moving and storage service for your needs.
         </p>
-
-        {/* Arrow - inside white box */}
-        <a
-          href={buttonLink}
-          className="absolute right-0 bottom-0 w-[42px] h-[42px] bg-[#ff8a00] flex items-center justify-center text-white text-[24px] hover:bg-[#e87900] transition"
-        >
-          →
-        </a>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {services.map((service, index) => (
+          <ServiceCard key={service.buttonLink} {...service} index={index} />
+        ))}
       </div>
     </div>
-  );
-};
-
-const ServiceSection = () => {
-  return (
-    <section className="w-full bg-white py-14 sm:py-16 px-6 overflow-hidden">
-      <div className="max-w-[1180px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              imageSrc={service.imageSrc}
-              title={service.title}
-              description={service.description}
-              buttonLink={service.buttonLink}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+  </section>
+);
 
 export default ServiceSection;

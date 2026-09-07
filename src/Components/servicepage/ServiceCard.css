@@ -1,0 +1,48 @@
+.service-collection {
+  background: linear-gradient(180deg, #f5f8fb 0%, #fff 100%);
+}
+
+.service-tile {
+  box-shadow: 0 4px 20px rgb(9 43 78 / 4%);
+}
+
+.service-tile-arrow {
+  background: #fff2df;
+  color: #914a00;
+}
+
+.service-tile-link:focus-visible {
+  outline: 2px solid #002f6c;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.service-tile:focus-within {
+  border-color: #a9bed2;
+  box-shadow: 0 16px 40px rgb(9 43 78 / 10%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .service-tile {
+    transition: opacity 700ms ease, translate 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 350ms ease, box-shadow 350ms ease, border-color 350ms ease;
+  }
+
+  .service-tile-image { transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .service-tile-arrow { transition: background-color 250ms ease, color 250ms ease; }
+  .service-tile-arrow svg { transition: transform 250ms ease; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .service-tile:hover {
+      transform: translateY(-6px);
+      border-color: #c2d1df;
+      box-shadow: 0 18px 44px rgb(9 43 78 / 11%);
+    }
+    .service-tile:hover .service-tile-image { transform: scale(1.045); }
+    .service-tile:hover .service-tile-arrow {
+      background: #ff9900;
+      color: #092b4e;
+    }
+    .service-tile-link:hover svg { transform: translateX(3px); }
+  }
+}

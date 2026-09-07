@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import heroBg from "../../assets/homepage/hero-bg.png";
 import './Home.css';  // Import the CSS file from the same directory

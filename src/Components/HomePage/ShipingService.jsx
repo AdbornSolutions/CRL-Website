@@ -40,7 +40,7 @@ const ShipingService = () => {
     if (card) {
       slider.scrollTo({
         left: card.offsetLeft - slider.offsetLeft,
-        behavior: "smooth",
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
       });
     }
 
@@ -123,7 +123,8 @@ const ShipingService = () => {
               {services.map((item, index) => (
                 <div
                   key={index}
-                  className="snap-start shrink-0 w-[280px] sm:w-[330px] lg:w-[360px] bg-white rounded-2xl"
+                  data-reveal
+                  className="motion-card snap-start shrink-0 w-[280px] sm:w-[330px] lg:w-[360px] bg-white rounded-2xl"
                 >
                   <div className="relative">
                     <img
