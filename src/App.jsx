@@ -19,6 +19,7 @@ import Contact from "./pages/Contact";
 import Project from "./pages/Project";
 import TermsPrivacy from "./pages/TermsPrivacy";
 import SiteMotion from "./Components/SiteMotion";
+import TrackShipment from "./pages/TrackShipment";
 
 
 
@@ -27,6 +28,7 @@ function App() {
     <>
     <SiteMotion />
     <Routes>
+      <Route path="/track" element={<TrackShipment />} />
       <Route path="/" element={<Home/>} />
       <Route path="/service" element={<Services />} />
       <Route path="/services/domestic" element={<Domestics />} />

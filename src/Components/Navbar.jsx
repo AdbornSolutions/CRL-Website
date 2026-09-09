@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/images/crl-logo.png";
 import facebookIcon from "../assets/images/Facebook.png";
@@ -54,16 +54,21 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile Toggle */}
-                    <div
+                    <button
                         className="menu-toggle"
+                        type="button"
+                        aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+                        aria-expanded={menuOpen}
+                        aria-controls="main-navigation"
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
                         &#9776;
-                    </div>
+                    </button>
 
                     {/* Navbar Links */}
-                    <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
+                    <div id="main-navigation" className={`navbar-links ${menuOpen ? "active" : ""}`}>
                         <ul>
+                            <li><NavLink to="/track" onClick={() => setMenuOpen(false)} className="tracking-nav-link">Track Shipment</NavLink></li>
                             <li>
                                 <a href="/">Home</a>
                             </li>

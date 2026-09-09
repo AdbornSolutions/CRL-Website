@@ -10,6 +10,7 @@ html, body {
 .menu-toggle {
   display: none;
 }
+.navbar-links a.tracking-nav-link { color: #ffd08a; font-weight: 600; }
 .header2 {
   position: fixed;
   top: 0;
@@ -335,4 +336,11 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 20% 100%);
     justify-content: center;
     padding-right: 0;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .navbar-right .call-icon, .navbar-right .call-text { display: none; }
+  .quote-wrapper { padding-left: 30px; padding-right: 18px; }
+  .quote-btn { padding: 10px 14px; font-size: 12px; }
+  .navbar-links ul { gap: 14px; font-size: 13px; }
 }
