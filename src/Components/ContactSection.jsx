@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 const ContactSection = () => {
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxjgrKOBM_iVGl7ANL8CbIRKtfYOfgjzlUDeFfXzyzFI-E0n6aJTYY_TKVm2JRn9g46/exec";
-
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -10,7 +8,6 @@ const ContactSection = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
@@ -20,39 +17,10 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    setSuccess("");
-
-    try {
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8",
-        },
-        body: JSON.stringify({
-          fullName: formData.fullName,
-          email: formData.email,
-          mobile: formData.mobile,
-          message: formData.message,
-        }),
-      });
-
-      setSuccess("Message sent successfully!");
-
-      setFormData({
-        fullName: "",
-        email: "",
-        mobile: "",
-        message: "",
-      });
-    } catch (error) {
-      setSuccess("Something went wrong. Please try again.");
-    }
-
-    setLoading(false);
+    setSuccess("Thanks! This is a static demo form, so no message was sent.");
+    setFormData({ fullName: "", email: "", mobile: "", message: "" });
   };
 
   return (
@@ -194,10 +162,9 @@ C/O Babarao Chaple Miniwada (Kondhali) <br />Tahsil – Katol District – Nagpu
 
             <button
               type="submit"
-              disabled={loading}
-              className="bg-sky-400 hover:bg-sky-500 text-black font-bold px-8 py-3 rounded-full transition disabled:opacity-60"
+              className="bg-sky-400 hover:bg-sky-500 text-black font-bold px-8 py-3 rounded-full transition"
             >
-              {loading ? "Submitting..." : "Submit"}
+              Submit
             </button>
 
             {success && (
