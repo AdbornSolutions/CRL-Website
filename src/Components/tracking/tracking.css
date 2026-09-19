@@ -32,6 +32,16 @@
 .tracking-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .tracking-actions button, .tracking-error button { border: 1px solid #b4c5d5; border-radius: 9px; padding: 10px 14px; font-size: 12px; }
 .tracking-feedback { margin-top: 12px; font-size: 12px; }
+.tracking-upload { border-color: #f0c178; background: linear-gradient(135deg,#fffaf1,#fff); }
+.tracking-upload-copy { color: #526476; font-size: 14px; line-height: 1.7; margin: 14px 0 20px; }
+.tracking-upload form > label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.tracking-upload-row { display: flex; gap: 12px; }
+.tracking-upload input[type="text"], .tracking-upload input[inputmode="numeric"] { min-width: 0; flex: 1; border: 1px solid #9daebf; border-radius: 12px; padding: 14px 16px; background: white; }
+.tracking-upload input[type="file"] { display: block; width: 100%; border: 1px dashed #9daebf; border-radius: 12px; padding: 14px; background: white; }
+.tracking-upload form > small { display: block; color: #526476; font-size: 12px; margin-top: 8px; }
+.tracking-upload-window { border-left: 3px solid #ff9900; background: #fff3df; color: #734500; font-size: 13px; line-height: 1.6; margin-bottom: 20px; padding: 10px 12px; }
+.tracking-upload-submit { margin-top: 18px; }
+.tracking-upload .tracking-validation { color: #a52222; font-size: 13px; margin-top: 14px; }
 .tracking-panel-heading h2, .tracking-help h2, .tracking-error h2 { font-weight: 600; font-size: 20px; }
 .tracking-panel-heading > span { font-size: 11px; color: #526476; }
 .tracking-timeline { list-style: none; padding: 0; margin: 28px 0 0 8px; }
@@ -58,7 +68,7 @@
 }
 @media (max-width: 600px) {
   .tracking-main { padding: 50px 16px; }
-  .tracking-search-row, .tracking-summary-top, .tracking-route { flex-direction: column; align-items: stretch; }
+  .tracking-search-row, .tracking-summary-top, .tracking-route, .tracking-upload-row { flex-direction: column; align-items: stretch; }
   .tracking-badge { align-self: flex-start; }
   .tracking-details { grid-template-columns: 1fr; gap: 20px; }
   .tracking-route { gap: 14px; }

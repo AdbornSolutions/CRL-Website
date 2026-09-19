@@ -1,10 +1,11 @@
 import { useState } from "react";
 import ShipmentStatusBadge from "./ShipmentStatusBadge";
 import TrackingTimeline from "./TrackingTimeline";
+import CustomerLrUpload from "./CustomerLrUpload";
 import { formatTrackingDate } from "./trackingUtils";
 import logo from "../../assets/images/crl-logo.png";
 
-export default function TrackingResult({ shipment, onRefresh }) {
+export default function TrackingResult({ shipment, onRefresh, onUploadComplete }) {
   const [feedback, setFeedback] = useState("");
   async function copy(link) {
     const url = new URL("/track", window.location.origin);
@@ -23,6 +24,7 @@ export default function TrackingResult({ shipment, onRefresh }) {
       <div className="tracking-actions tracking-no-print"><button onClick={onRefresh}>Refresh Status</button><button onClick={() => copy(true)}>Copy Tracking Link</button><button onClick={() => window.print()}>Print</button></div>
       <p role="status" className="tracking-feedback tracking-no-print">{feedback}</p>
     </div>
+    {shipment.lrUploadEligible && <CustomerLrUpload lrNumber={shipment.lrNumber} onUploaded={onUploadComplete} />}
     <TrackingTimeline events={shipment.trackingHistory} status={shipment.status} />
   </div>;
 }
