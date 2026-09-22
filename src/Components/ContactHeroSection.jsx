@@ -3,7 +3,7 @@ import heroImage from "../assets/images/contact-bg.png";
 
 const ContactHeroSection = () => {
   return (
-    <section className="relative w-full h-[400px] md:h-[420px] overflow-hidden">
+    <section className="relative w-full h-[400px] md:h-[620px] overflow-hidden">
       
       {/* Background Image */}
       <img
@@ -31,6 +31,17 @@ const ContactHeroSection = () => {
             </p>
 
           </div>
+           <div className="flex flex-wrap items-center mt-8 gap-3">
+             <a
+            href="/track"
+            className="inline-flex items-center gap-2 border border-white bg-white/10 hover:bg-white hover:text-[#002f6c] text-white px-6 py-3 rounded-xl text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
+          >
+            Track Shipment
+            <span className="w-5 h-5 rounded-md flex items-center justify-center text-base">
+              →
+            </span>
+          </a>
+           </div>
 
         </div>
       </div>
