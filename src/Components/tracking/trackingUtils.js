@@ -1,5 +1,11 @@
 export const statuses = {
   BOOKED: ["Shipment Booked", "blue"], IN_TRANSIT: ["In Transit", "orange"],
+  SEGREGATED: ["Shipment Segregated", "blue"], MANIFESTED: ["Added to Manifest", "blue"],
+  PICKED_UP: ["Picked Up", "orange"], AT_HUB: ["At Hub", "blue"],
+  DELIVERED: ["Delivered", "green"], EXCEPTION: ["Delivery Exception", "red"],
+  MONEY_RECEIPT_CREATED: ["Payment Receipt Recorded", "blue"], TRIP_PLANNED: ["Trip Planned", "orange"],
+  OUT_FOR_DELIVERY: ["Out for Delivery", "orange"], POD_UPLOADED: ["POD Uploaded", "green"],
+  DRS_CLOSED: ["Delivery Run Closed", "green"],
   RECEIVED: ["Shipment Received", "blue"], LR_IMAGE_UPLOADED: ["Document Received", "blue"],
   LR_IMAGE_VERIFIED: ["Document Verified", "green"], COMPLETED: ["Delivery Completed", "green"],
   CLOSED: ["Shipment Closed", "green"], CANCELLED: ["Cancelled", "red"],
