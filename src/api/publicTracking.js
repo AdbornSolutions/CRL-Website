@@ -32,7 +32,6 @@ export function normalizeTracking(payload) {
     destination: text(data.destination),
     currentLocation: text(data.currentLocation),
     bookingDate: text(data.bookingDate),
-    expectedDeliveryDate: text(data.expectedDeliveryDate),
     trackingHistory: Array.isArray(data.trackingHistory)
       ? data.trackingHistory
           .filter((event) => event && text(event.status))

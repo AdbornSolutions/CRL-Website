@@ -20,7 +20,7 @@ export default function TrackingResult({ shipment, onRefresh, onUploadComplete }
     <div className="tracking-panel">
       <div className="tracking-summary-top"><div><p className="tracking-eyebrow">LR number</p><h2>{shipment.lrNumber}</h2><button className="tracking-text-button tracking-no-print" onClick={() => copy(false)}>Copy LR</button></div><ShipmentStatusBadge status={shipment.status} /></div>
       <div className="tracking-route"><div><span>Origin</span><strong>{shipment.origin || "Not available"}</strong></div><span className="tracking-route-line" aria-hidden="true">→</span><div><span>Destination</span><strong>{shipment.destination || "Not available"}</strong></div></div>
-      <dl className="tracking-details"><div><dt>Current location</dt><dd>{shipment.currentLocation || "Not available"}</dd></div><div><dt>Booking date</dt><dd>{formatTrackingDate(shipment.bookingDate)}</dd></div><div><dt>Expected delivery</dt><dd>{formatTrackingDate(shipment.expectedDeliveryDate)}</dd></div></dl>
+      <dl className="tracking-details"><div><dt>Current location</dt><dd>{shipment.currentLocation || "Not available"}</dd></div><div><dt>Booking date</dt><dd>{formatTrackingDate(shipment.bookingDate)}</dd></div></dl>
       <div className="tracking-actions tracking-no-print"><button onClick={onRefresh}>Refresh Status</button><button onClick={() => copy(true)}>Copy Tracking Link</button><button onClick={() => window.print()}>Print</button></div>
       <p role="status" className="tracking-feedback tracking-no-print">{feedback}</p>
     </div>
