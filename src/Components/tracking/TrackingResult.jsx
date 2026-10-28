@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE_URL } from "../../api/publicTracking";
 import ShipmentStatusBadge from "./ShipmentStatusBadge";
 import TrackingTimeline from "./TrackingTimeline";
 import CustomerLrUpload from "./CustomerLrUpload";
@@ -24,6 +25,7 @@ export default function TrackingResult({ shipment, onRefresh, onUploadComplete }
       <div className="tracking-actions tracking-no-print"><button onClick={onRefresh}>Refresh Status</button><button onClick={() => copy(true)}>Copy Tracking Link</button><button onClick={() => window.print()}>Print</button></div>
       <p role="status" className="tracking-feedback tracking-no-print">{feedback}</p>
     </div>
+    {shipment.podAvailable && <div className="tracking-panel"><a href={`${API_BASE_URL}/public/track/${encodeURIComponent(shipment.lrNumber)}/pod`} download>Download POD</a></div>}
     {shipment.lrUploadEligible && <CustomerLrUpload lrNumber={shipment.lrNumber} onUploaded={onUploadComplete} />}
     <TrackingTimeline events={shipment.trackingHistory} status={shipment.status} />
   </div>;
